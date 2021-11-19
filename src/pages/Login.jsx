@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Sidebar = () => {
+const Login = () => {
     return (
         <div>
-            SideBar
+            Pagina para el login
         </div>
     )
 }
 
-export default Sidebar
+export default Login
