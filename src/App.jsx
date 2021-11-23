@@ -1,4 +1,4 @@
-
+import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import 'styles/styles.css';
 import Login from 'pages/Login';
@@ -10,6 +10,8 @@ import Registro from 'pages/Registro';
 import PublicLayouts from 'layouts/PublicLayouts';
 import AuthLayout from 'layouts/AuthLayout';
 import './App.css';
+import { DarkModeContext } from 'context/darkMode';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -19,7 +21,13 @@ import route from 'color-convert/route';
 import PrivateLayout from 'layouts/PrivateLayout';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    console.log('modo dark:', darkMode);
+  }, [darkMode]);
   return (
+  <div className="App">
+  <DarkModeContext.Provider value={{darkMode,setDarkMode}}>
     <Router>
       <Switch>
 
@@ -66,6 +74,9 @@ function App() {
         </Route>
       </Switch>
     </Router>
+  
+  </DarkModeContext.Provider>
+  </div>
   );
 }
 
