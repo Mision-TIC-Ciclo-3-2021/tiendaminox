@@ -39,7 +39,7 @@ function App() {
   <Auth0Provider
     domain="misiontic-consesionario.us.auth0.com"
     clientId="ayl787O3iKDHyEcMB451VeGZ7b6H5A1E"
-    redirectUri='http://localhost:3000/admin'
+    redirectUri='https://glacial-plateau-07128.herokuapp.com/admin'
     audience= 'api-autenticacion-consesionario-mintic'
   >
   <div className="App">
